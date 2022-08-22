@@ -1,11 +1,11 @@
 import logo from './tapa16.jpg';
-import navBar from './componentes/navBar/navBar';
+import NavBar from './componentes/navBar/navBar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-          <navBar/>
+          <NavBar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

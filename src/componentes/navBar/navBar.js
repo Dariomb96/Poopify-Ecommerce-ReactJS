@@ -1,11 +1,12 @@
 import logo from '../../recursos/poopifyv.png';
+import loginIco from '../../recursos/user-64.ico';
 import  './style.css';
-const navBar = () => {
+const barrita = () => {
     return (
         <div className="navbar-container">
-            <div><img width="100px" src={logo} alt="logo" /></div>
+            <div><img width="55px" src={logo} alt="logo" /></div>
             <div>
-                <ul>
+                <ul className="navMenu">
                     <li>
                         <a href="#">home</a>
                     </li>
@@ -17,8 +18,11 @@ const navBar = () => {
                     </li>
                 </ul>
             </div>
+            <a href="#">
+                <img width="50%" src={loginIco} alt="login" />
+            </a>
         </div>
     )
 };
 
-export default navBar;
+export default barrita;
