@@ -11,9 +11,22 @@
 .navMenu{
     list-style-type: none;
     display: flex;
-    justify-items: space-between;
+    padding-left: 75px;
+    justify-self: center;
+
 }
 li{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+}
+
+.cart-widget{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+
+}
+.user{
+    display: flex;
+    align-items: center;
 }

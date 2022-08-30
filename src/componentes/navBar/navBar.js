@@ -1,6 +1,7 @@
 import logo from '../../recursos/poopifyv.png';
-import loginIco from '../../recursos/user-64.ico';
-import  './style.css';
+import loginIco from '../../recursos/user-32.ico';
+import './NavBar.css';
+import CartWidget from './CartWidget'
 const barrita = () => {
     return (
         <div className="navbar-container">
@@ -18,9 +19,12 @@ const barrita = () => {
                     </li>
                 </ul>
             </div>
-            <a href="#">
-                <img width="50%" src={loginIco} alt="login" />
-            </a>
+            <div className="user">
+            <CartWidget />
+                <a href="#">
+                    <img src={loginIco} alt="login" />
+                </a>
+                </div>
         </div>
     )
 };

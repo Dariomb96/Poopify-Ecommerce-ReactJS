@@ -1,3 +1,9 @@
+*{
+  text-decoration: none;
+  color: azure;
+  background-color: black;
+}
+
 .App {
   text-align: center;
 }
