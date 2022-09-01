@@ -5,8 +5,8 @@ import CartWidget from './CartWidget'
 const barrita = () => {
     return (
         <div className="navbar-container">
-            <div><img width="55px" src={logo} alt="logo" /></div>
-            <div>
+            <div><img width="55px" src={logo} alt="Poopify logo" /></div>
+            <nav>
                 <ul className="navMenu">
                     <li>
                         <a href="#">home</a>
@@ -18,7 +18,7 @@ const barrita = () => {
                         <a href="#">contacts</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div className="user">
             <CartWidget />
                 <a href="#">
