@@ -1,7 +1,5 @@
 
-.lista-items{
-    margin-left: 38%;
+.itemList{
+    display: flex;
     margin-bottom: 100px;
-    width: 25%;
-    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
 }

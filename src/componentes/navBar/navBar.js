@@ -1,11 +1,10 @@
-import logo from '../../recursos/poopifyv.png';
-import loginIco from '../../recursos/user-32.ico';
 import './NavBar.css';
 import CartWidget from './CartWidget'
+
 const barrita = () => {
     return (
         <div className="navbar-container">
-            <div><img width="55px" src={logo} alt="Poopify logo" /></div>
+            <div><img width="55px" src='/assets/ico/poopifyv.png' alt="Poopify logo" /></div>
             <nav>
                 <ul className="navMenu">
                     <li>
@@ -22,7 +21,7 @@ const barrita = () => {
             <div className="user">
             <CartWidget />
                 <a href="#">
-                    <img src={loginIco} alt="login" />
+                    <img src='/assets/ico/user-32.ico' alt="login" />
                 </a>
                 </div>
         </div>
