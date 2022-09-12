@@ -6,3 +6,14 @@
     box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
     width: 20%;
 }
+
+@media (min-width: 370px) and (max-width: 400px) {
+
+    .diskCover{
+        width: 150px;
+    }
+    .itemCard{
+        margin: 2.5%;
+        width: 45%;
+    }
+}

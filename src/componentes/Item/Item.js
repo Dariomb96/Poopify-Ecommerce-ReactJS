@@ -4,7 +4,6 @@ import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({producto}) => {
     const {name, artist, price, img, stock} = producto;
-    console.log(img);
   return (
     <div className='itemCard'>
         <img className='diskCover' src={img} alt={name} />

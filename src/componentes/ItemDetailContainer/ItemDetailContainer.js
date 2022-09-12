@@ -5,28 +5,28 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([]);
-
-    const getItem = new Promise( (resolve, reject) => {
-        setTimeout( () => {
+    console.log(item)
+    const getItem = new Promise((resolve, reject) => {
+        setTimeout(() => {
             resolve(productMock)
         }, 2000)
     })
 
     useEffect(() => {
         getItem
-            .then( (res) => { 
+            .then((res) => {
                 setItem(res);
             })
-            .catch( (error) => {
+            .catch((error) => {
                 console.log("Error");
             })
     }, []);
 
-    return(
+    return (
         <>
-            <ItemDetail item={item}/>
+                <ItemDetail item={item} />
         </>
-    )
-}   
+    );
+};
 
 export default ItemDetailContainer

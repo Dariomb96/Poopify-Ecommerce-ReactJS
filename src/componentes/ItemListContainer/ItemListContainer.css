@@ -5,3 +5,12 @@
     margin-bottom: 100px;
     justify-content: center;
 }
+@media (min-width: 370px) and (max-width: 400px) {
+
+.itemList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+}

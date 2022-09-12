@@ -5,6 +5,8 @@
 }
 
 .App {
+  width: 90%;
+  margin-left: 5%;
   text-align: center;
 }
 

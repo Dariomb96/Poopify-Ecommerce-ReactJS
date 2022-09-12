@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
     return (
         <div className="itemDetail">
             <div>
-                <img src={img} className="cover" alt="loading..." />
+                <img src={img} className="cover" alt={name} />
             </div>
 
             <div className="details">
