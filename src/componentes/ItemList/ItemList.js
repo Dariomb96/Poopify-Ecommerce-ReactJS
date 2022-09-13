@@ -7,7 +7,7 @@ const ItemList = ({ itemList }) => {
                 return (
                     <Item
                         key={producto.id}
-                        producto={producto}
+                        {...producto}
                     />
                 );
             })}

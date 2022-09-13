@@ -1,30 +1,33 @@
+import data from '../Item/ListaItems'
 import { useEffect, useState } from "react"
-import productMock from "../../utils/ProductDetailMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
+    const { productId } = useParams();
     const [item, setItem] = useState([]);
-    console.log(item)
-    const getItem = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productMock)
-        }, 2000)
-    })
 
+    const getItem = (id) => {
+        return new Promise((resolve, reject) => {
+            const producto = data.find(item => item.id === parseInt(id));
+            setTimeout(() => {
+                resolve(producto)
+            }, 1000)
+        })
+    }
     useEffect(() => {
-        getItem
-            .then((res) => {
-                setItem(res);
-            })
-            .catch((error) => {
-                console.log("Error");
-            })
-    }, []);
+        const getProducto = async () => {
+            const producto = await getItem(productId);
+            setItem(producto);
+        }
+        getProducto();
+    }, [productId]);
 
+console.log(item.img)
     return (
         <>
-                <ItemDetail item={item} />
+            <ItemDetail item={item} />
         </>
     );
 };

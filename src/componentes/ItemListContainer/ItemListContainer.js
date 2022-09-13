@@ -6,13 +6,12 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
     const {categoryId} = useParams();
-    console.log('categoryId', categoryId);
     const [itemList, setItems] = useState([]);
 
     const getData = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(data);
-        }, 2000);
+        }, 1000);
     });
 
     useEffect(() => {
@@ -24,7 +23,7 @@ const ItemListContainer = () => {
             setItems(result);
         });
     }, [categoryId]);
-    
+
     return (
         <>
         {itemList.length > 0 ? (

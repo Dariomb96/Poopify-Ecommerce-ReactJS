@@ -21,9 +21,6 @@ const barrita = () => {
                     <li>
                     <NavLink className={({isActive})=> isActive ? 'seleccionado' : 'noseleccionado'} to="/genero/raw-techno">raw-techno</NavLink>
                     </li>
-                    <li>
-                    <NavLink className={({isActive})=> isActive ? 'seleccionado' : 'noseleccionado'} to="/detail">Detalle</NavLink>
-                    </li>
                 </ul>
             </nav>
             <div className="user">

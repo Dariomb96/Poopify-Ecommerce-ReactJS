@@ -1,5 +1,5 @@
 import ItemCount from '../ItemCount/ItemCount';
-
+import './ItemDetail.css'
 
 const ItemDetail = ({item}) => {
 
@@ -14,14 +14,12 @@ const ItemDetail = ({item}) => {
             <div>
                 <img src={img} className="cover" alt={name} />
             </div>
-
             <div className="details">
                 <h2>{name}</h2>
-                <p>{description}</p>
+                <p className="description">{description}</p>
                 <span>{price} $ ARS</span>
                 <ItemCount stock={10} initial={1} onAdd={productsAdded}/>
             </div>
-
         </div>
     );
 
