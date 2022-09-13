@@ -24,7 +24,6 @@ const ItemDetailContainer = () => {
         getProducto();
     }, [productId]);
 
-console.log(item.img)
     return (
         <>
             <ItemDetail item={item} />
