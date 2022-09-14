@@ -21,6 +21,7 @@ function ItemCount({ stock, initial }) {
         } else console.log("Sin stock");
     }
 
+    if(productStock > 0){
     return (
         <div className='stock'>
             <p>Stock: {productStock}</p>
@@ -32,6 +33,14 @@ function ItemCount({ stock, initial }) {
             </div>
         </div>
     )
+    }else{
+        return(
+            <div className="stock">
+                <h2 className="contadorProducto">No hay stock!</h2>
+            </div>
+        )
+    }
+
 }
 
 export default ItemCount

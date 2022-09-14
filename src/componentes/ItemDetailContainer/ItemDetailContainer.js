@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
             const producto = data.find(item => item.id === parseInt(id));
             setTimeout(() => {
                 resolve(producto)
-            }, 1000)
+            }, 10)
         })
     }
     useEffect(() => {
