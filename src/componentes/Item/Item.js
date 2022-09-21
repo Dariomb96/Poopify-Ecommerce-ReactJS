@@ -1,6 +1,5 @@
 import React from 'react'
 import './Item.css'
-import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
 const Item = ({name, artist, price, img, stock, id}) => {
@@ -9,9 +8,12 @@ const Item = ({name, artist, price, img, stock, id}) => {
     <Link to={`/item/${id}`}>
         <img className='diskCover' src={img} alt={name} />
         </Link>
-        <h3>{name} - {artist}</h3>
-        <p>${price}</p>
-        <ItemCount stock={stock} initial={0}></ItemCount>
+        <h4>{artist}</h4>
+        <h3 className='name'>{name} </h3>
+        <p className='price'>${price}</p>
+        <Link to={`/item/${id}`}>
+        <h4 className='info'>Ver mas info</h4>
+        </Link>
     </div>
   )
 }

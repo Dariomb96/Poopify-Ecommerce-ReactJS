@@ -1,27 +1,29 @@
 import { useState } from 'react';
 import './ItemCount.css';
 
-function ItemCount({ stock, initial }) {
+function ItemCount({ stock, onAdd }) {
 
-    const [productCounter, setProductCounter] = useState(initial);
+    const [productCounter, setProductCounter] = useState(1);
     const [productStock, setProductStock] = useState(stock);
 
-    const addProduct = () => {
+    const addProduct = (e) => {
         productStock > productCounter ? setProductCounter(productCounter + 1) : console.log(`No hay suficiente stock`);
+        e.stopPropagation();
     }
 
-    const removeProduct = () => {
+    const removeProduct = (e) => {
         productCounter > 1 ? setProductCounter(productCounter - 1) : console.log(`La cantidad a comprar no puede ser menor a 1 xd`);
+        e.stopPropagation();
     }
 
     const addToCart = () => {
-        if (productStock > 0) {
+    if (productStock > 0) {
+            onAdd(productCounter);
             setProductStock(productStock - productCounter);
             setProductCounter(1);
         } else console.log("Sin stock");
     }
 
-    if(productStock > 0){
     return (
         <div className='stock'>
             <p>Stock: {productStock}</p>
@@ -33,13 +35,6 @@ function ItemCount({ stock, initial }) {
             </div>
         </div>
     )
-    }else{
-        return(
-            <div className="stock">
-                <h2 className="contadorProducto">No hay stock!</h2>
-            </div>
-        )
-    }
 
 }
 

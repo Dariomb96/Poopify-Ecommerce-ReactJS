@@ -5,6 +5,7 @@
 .agregarCarrito{
     box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
     margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 .agregarCarrito:active {

@@ -11,8 +11,7 @@
 .navMenu{
     list-style-type: none;
     display: flex;
-    padding-left: 75px;
-    justify-self: center;
+    margin-right: auto;
 
 }
 li{
@@ -24,6 +23,7 @@ li{
     display: flex;
     align-items: center;
     margin-right: 25px;
+    margin-left: -75px;
 
 }
 .user{
