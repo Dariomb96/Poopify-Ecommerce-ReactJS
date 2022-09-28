@@ -1,0 +1,38 @@
+.coverCart{
+    width: 200px;
+    border-radius: 100%;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+}
+.customButton{
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+.mb{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.total{
+    margin-right: 1rem;
+}
+input{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid purple;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.email{
+    padding-right: 22px;
+}

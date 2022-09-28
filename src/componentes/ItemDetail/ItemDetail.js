@@ -16,7 +16,7 @@ const ItemDetail = ({item}) => {
         addItem({...item, quantity: count})
         setQuantitySelected(true);
     }
-
+if (stock){
     return (
         <div className="itemDetail">
             <div>
@@ -26,11 +26,16 @@ const ItemDetail = ({item}) => {
                 <h2>{name}</h2>
                 <p className="description">{description}</p>
                 <span>{price}$ ARS</span>
-                { !quantitySelected ? <ItemCount stock={10} onAdd={productsAdded}/> : <Link to="/cart"><button>Terminar compra</button> </Link>}
+                <ItemCount stock={stock} onAdd={productsAdded}/>
+                <Link to="/cart"><button className="custom">Terminar compra</button> </Link>
             </div>
         </div>
     );
-
+    }else{
+        return(
+            <h1>Loading...</h1>
+        )
+    }
 
 
 }

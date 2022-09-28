@@ -1,7 +1,13 @@
 .cover{
     width: 400px;
+    border-radius: 100%;
 }
 .description{
     margin-left: 10%;
     width: 80%;
+}
+.custom{
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid purple;
 }

@@ -12,12 +12,12 @@ function ItemCount({ stock, onAdd }) {
     }
 
     const removeProduct = (e) => {
-        productCounter > 1 ? setProductCounter(productCounter - 1) : console.log(`La cantidad a comprar no puede ser menor a 1 xd`);
+        productCounter > 1 ? setProductCounter(productCounter - 1) : console.log(`La cantidad a comprar no puede ser menor a 1`);
         e.stopPropagation();
     }
 
     const addToCart = () => {
-    if (productStock > 0) {
+        if (productStock > 0) {
             onAdd(productCounter);
             setProductStock(productStock - productCounter);
             setProductCounter(1);
@@ -35,6 +35,7 @@ function ItemCount({ stock, onAdd }) {
             </div>
         </div>
     )
+
 
 }
 

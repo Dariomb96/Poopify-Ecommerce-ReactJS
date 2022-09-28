@@ -8,13 +8,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 const ItemListContainer = () => {
     const { categoryId } = useParams();
     const [itemList, setItems] = useState([]);
-    /*
-        const getData = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(data);
-            }, 1000);
-        });
-    */
+
     useEffect(() => {
         const queryRef = !categoryId ? collection(db, "items") : query(collection(db, "items"), where("genre", "==", categoryId));
         getDocs(queryRef).then(response => {
@@ -28,7 +22,7 @@ const ItemListContainer = () => {
             setItems(results);
         })
     }, [categoryId]);
-
+    
         return (
             <>
                 {itemList.length > 0 ? (
