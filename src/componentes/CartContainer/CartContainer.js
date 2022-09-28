@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import './CartContainer.css'
 import { db } from '../../utils/firebase'
-import { collection, addDoc, updateDoc } from 'firebase/firestore'
+import { collection, addDoc, } from 'firebase/firestore'
 
 const CartContainer = () => {
 
@@ -29,31 +29,7 @@ const CartContainer = () => {
       setIdOrder(response.id);
     });
   }
-  /*
-  const updateOrder = () => {
-    const queryRef = doc(db, "orders", "");
-    updateDoc(queryRef, {
-      buyer: {
-        name: "opa",
-        phone: "12354135",
-        email: "elmailsito@gmail.com",
-      },
-      items: [{
-        artist: "M.I.T.A.",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        genre: "driving-techno",
-        id: "2pVFWrnDAeTqQ5CSYijO",
-        img: "https://firebasestorage.googleapis.com/v0/b/poopify-reactjs.appspot.com/o/img%2Ftapa16.jpg?alt=media&token=d28264e9-58ee-4154-8499-b1cf56e03187",
-        name: "Never Mind Have Fun",
-        price: 4500,
-        quantity: 3,
-        stock: 7,
-        total: 13500,
-      }
-      ],
-      total: 13500,
-    }).then(response => console.log(response))
-  }*/
+
 if (idOrder){
   return (
     <div>

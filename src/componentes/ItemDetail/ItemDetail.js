@@ -1,5 +1,5 @@
 import ItemCount from '../ItemCount/ItemCount';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css'
@@ -9,12 +9,9 @@ const ItemDetail = ({item}) => {
     const {name, price, img, description, stock} = item;
 
     const {addItem} = useContext(CartContext);
-    const [quantitySelected, setQuantitySelected] = useState(false);
 
     const productsAdded = ( count ) => {
-        
         addItem({...item, quantity: count})
-        setQuantitySelected(true);
     }
 if (stock){
     return (
